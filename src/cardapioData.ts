@@ -1,63 +1,135 @@
 export interface CardapioProps {
-  prato: {
-    entrada: { item: string }[];
+  pratos: {
+    id: string;
+    titulo: string;
+    entrada?: { item: string }[];
     principal?: { item: string }[];
     acompanhamentos?: { item: string }[];
     sobremesa?: { item: string }[];
-  };
+  }[];
 }
 
 export const cardapioData: CardapioProps = {
-  prato: {
-    entrada: [
-      {
-        item: 'Pão de alho com ervas finas e queijo derretido.',
-      },
-      {
-        item: "Salada Caprese: Tomates frescos, queijo de búfala e manjericão regados com azeite de oliva."                    
-      }
+  pratos: [
+    {
+      id: crypto.randomUUID(),
+      titulo: "Massas",
+      entrada: [
+        {
+          item: 'Bruschettas, Manjericão, Mussarela e Tomate',
+        },
+        {
+          item: 'Cestinha de massa, Filo de queijo branco e Geleia de pimenta',
+        },
       ],
-    principal: [
-      {
-        item: 'Picanha suculenta grelhada no ponto perfeito.',
-      },
-      {
-        item: 'Costelinha de porco com molho barbecue artesanal.',
-      },
-      {
-        item: 'Linguiça artesanal temperada.',
-      },
-      {
-        item: 'Frango marinado com ervas e limão.',
-      },
+      principal: [
+        {
+          item: 'Penne, Fettuccine, Sofioli e Ravioli',
+        },
+        {
+          item: 'Molho ao funghi, Molho de tomate fresco e manjericão, Molho 3 queijos e Molho Bolanhesa',
+        },
       ],
-    acompanhamentos: [
-      {
-        item: 'Arroz branco soltinho.',
-      },
-      {
-        item: 'Farofa crocante.',
-      },
-      {
-        item: 'Arroz branco soltinho.',
-      },
-      {
-        item: 'Feijão tropeiro com bacon e linguiça.',
-      },
-      {
-        item: 'Salada de maionese com legumes frescos.',
-      },
-    ],
-    sobremesa: [
-      {
-        item: 'Espetinho de frutas frescas com calda de chocolate.',
-      },
-      {
-        item: 'Pudim de leite condensado cremoso.',
-      },
-      {
-        item: 'Torta de limão com merengue.',
-      },
-    ],
-  }
-}
+      acompanhamentos: [
+        {
+          item: 'Pão italiano',
+        },
+        {
+          item: 'Salada caprese',
+        },
+        {
+          item: 'Legumes salteado na manteiga',
+        },
+      ],
+      sobremesa: [
+        {
+          item: 'Panna cotta de goiaba',
+        },
+        {
+          item: 'Salame di cioccolato',
+        },
+      ],
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: "Churrasco",
+      entrada: [
+        {
+          item: 'Pão de alho com queijo coalho.',
+        },
+      ],
+      principal: [
+        {
+          item: 'Fraldinha, Maminha, Picanha, Alcatra, Linguiça, Coração de frango, Drumet e Ostrinha de frango e Panceta',
+        },
+      ],
+      acompanhamentos: [
+        {
+          item: 'Arroz branco',
+        },
+        {
+          item: 'Farofa de bacon',
+        },
+        {
+          item: 'Salada de maionese',
+        },
+        {
+          item: 'Vinagrete',
+        },
+        {
+          item: 'Salada verde',
+        },
+      ],
+      sobremesa: [
+        {
+          item: 'Banana grelhada com canela e açúcar',
+        },
+        {
+          item: 'Mousse de limão',
+        },
+      ],
+    },
+    {
+      id: crypto.randomUUID(),
+      titulo: "Feijoada",
+      entrada: [
+        {
+          item: 'Pastelzinho de queijo',
+        },
+        {
+          item: 'Caldo de feijão',
+        },
+      ],
+      principal: [
+        {
+          item: 'Feijoada light (calabresa, paio, bacon, lombro e costelinha)',
+        },
+        {
+          item: 'Feijoada completa (inclui pé e rabo de porco)',
+        },
+        {
+          item: 'Arroz branco',
+        },
+      ],
+      acompanhamentos: [
+        {
+          item: 'Farofa temperada',
+        },
+        {
+          item: 'Couve refogada',
+        },
+        {
+          item: 'Torresmo',
+        },
+      ],
+      sobremesa: [
+        {
+          item: 'Mousse de limão',
+        },
+        {
+          item: 'Fruta da estação',
+        },
+      ],
+    },
+  ],
+};

@@ -2,6 +2,8 @@ import * as Tab from '@radix-ui/react-tabs';
 import { FacebookOutlined, InstagramOutlined,WhatsAppOutlined } from '@ant-design/icons';
 import {Smartphone, CookingPot, Star} from 'lucide-react'
 import { Dialog } from './dialog';
+import { cardapioData } from '../cardapioData';
+import GoogleReviews from './googleReviews';
 export function Tabs() {
   return ( 
       <Tab.Root
@@ -35,9 +37,12 @@ export function Tabs() {
           className="grow p-5 bg-gray-50 rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
           value="tab1"
         >
-          <Dialog titulo='Churrasco'/>
+          {cardapioData.pratos.map((prato) => (
+            <Dialog key={prato.id} pratos={[prato]} />
+          ))}
+          {/* <Dialog titulo='Churrasco'/>
           <Dialog titulo='Arroz'/>
-          <Dialog titulo='Frango'/>
+          <Dialog titulo='Frango'/> */}
         </Tab.Content>
         <Tab.Content
           className="grow p-5 bg-gray-50 rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
@@ -66,7 +71,8 @@ export function Tabs() {
           value="tab3"
         >
           <div className='flex justify-center'>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139659.12286090016!2d-46.7633780908815!3d-23.525087843845213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8bf9b5f8d0d14d5d%3A0x7bbb40745797029d!2sDona%20Maria%20Cozinha%20Artesanal%20-%20Personal%20Chef!5e0!3m2!1spt-BR!2sbr!4v1707594053171!5m2!1spt-BR!2sbr"  height="300" loading="lazy"/>
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139659.12286090016!2d-46.7633780908815!3d-23.525087843845213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8bf9b5f8d0d14d5d%3A0x7bbb40745797029d!2sDona%20Maria%20Cozinha%20Artesanal%20-%20Personal%20Chef!5e0!3m2!1spt-BR!2sbr!4v1707594053171!5m2!1spt-BR!2sbr"  height="300" loading="lazy"/> */}
+            <GoogleReviews/>
           </div>
         </Tab.Content>
       </Tab.Root>
