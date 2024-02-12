@@ -52,7 +52,7 @@ export function Dialog ({titulo}: DialogProps) {
             </ul>
           </div>
           <a 
-          href={`https://wa.me/5511998874422/?text=Ol%C3%A1,%20estou%20interessado%20em:%20*${titulo}*`}
+          href={`https://wa.me/5511999628634/?text=Ol%C3%A1,%20estou%20interessado%20em:%20*${titulo}*`}
           className='bg-lime-500 py-2 rounded-md w-full block text-center font-medium text-white hover:bg-lime-600 transition-colors'
           >
           <span className='flex items-center justify-center gap-2'>

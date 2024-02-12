@@ -44,7 +44,7 @@ export function Tabs() {
           value="tab2"
         >
           <div className='space-y-3'>
-            <a href="https://wa.me/5511998874422" 
+            <a href="https://wa.me/5511999628634" 
               className='flex items-center gap-4 p-2 rounded-md shadow group bg-white'>
               <WhatsAppOutlined className='' />
               <span className='font-medium group-hover:underline'>Whatsapp</span>
