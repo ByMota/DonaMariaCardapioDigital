@@ -1,9 +1,12 @@
 import { Tabs } from "./components/tabs";
 import cozinheiro from "./assets/cozinheiro-x-dicas-para-encontrar-o-profissional-ideal-20210422170036.jpg.jpg"
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
 
   return (
+    <>
+    <Analytics/>
     <main className="flex flex-col items-center m-auto min-w-96 max-w-3xl md:w-full my-5 ">
       <div className="relative ">
         <div className="space-y-5">
@@ -18,6 +21,7 @@ function App() {
       </div>
       <Tabs/>
     </main>
+    </>
   )
 }
 
